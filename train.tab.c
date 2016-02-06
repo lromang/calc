@@ -387,16 +387,16 @@ union yyalloc
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  2
 /* YYLAST -- Last index in YYTABLE.  */
-#define YYLAST   28
+#define YYLAST   46
 
 /* YYNTOKENS -- Number of terminals.  */
 #define YYNTOKENS  23
 /* YYNNTS -- Number of nonterminals.  */
 #define YYNNTS  6
 /* YYNRULES -- Number of rules.  */
-#define YYNRULES  16
+#define YYNRULES  21
 /* YYNSTATES -- Number of states.  */
-#define YYNSTATES  28
+#define YYNSTATES  36
 
 /* YYTRANSLATE[YYX] -- Symbol number corresponding to YYX as returned
    by yylex, with out-of-bounds checking.  */
@@ -445,7 +445,8 @@ static const yytype_uint8 yytranslate[] =
 static const yytype_uint8 yyrline[] =
 {
        0,    15,    15,    16,    19,    20,    21,    24,    25,    26,
-      29,    30,    31,    34,    35,    36,    49
+      30,    31,    32,    33,    34,    35,    36,    37,    40,    41,
+      42,    55
 };
 #endif
 
@@ -472,10 +473,10 @@ static const yytype_uint16 yytoknum[] =
 };
 # endif
 
-#define YYPACT_NINF -18
+#define YYPACT_NINF -19
 
 #define yypact_value_is_default(Yystate) \
-  (!!((Yystate) == (-18)))
+  (!!((Yystate) == (-19)))
 
 #define YYTABLE_NINF -1
 
@@ -486,9 +487,10 @@ static const yytype_uint16 yytoknum[] =
      STATE-NUM.  */
 static const yytype_int8 yypact[] =
 {
-     -18,     0,   -18,   -17,   -15,    -1,   -18,     1,     7,     4,
-     -18,    12,    19,     6,    -1,    -1,   -18,    -1,    -1,   -18,
-     -18,   -13,   -18,     7,     7,     4,     4,   -18
+     -19,     0,   -19,   -10,    12,    15,    17,    30,    32,    33,
+      13,   -19,    24,    -2,    29,   -19,    35,   -19,   -19,   -19,
+     -19,   -19,   -19,    -3,    13,    13,   -19,    13,    13,   -19,
+     -19,   -19,    -2,    -2,    29,    29
 };
 
   /* YYDEFACT[STATE-NUM] -- Default reduction number in state STATE-NUM.
@@ -496,21 +498,22 @@ static const yytype_int8 yypact[] =
      means the default is an error.  */
 static const yytype_uint8 yydefact[] =
 {
-       2,     0,     1,    13,     0,     0,    14,     0,     4,     7,
-      10,     0,     0,     0,     0,     0,     3,     0,     0,    15,
-      11,     0,    16,     5,     6,     8,     9,    12
+       2,     0,     1,    18,     0,     0,     0,     0,     0,     0,
+       0,    19,     0,     4,     7,    10,     0,    12,    13,    14,
+      16,    15,    17,     0,     0,     0,     3,     0,     0,    20,
+      11,    21,     5,     6,     8,     9
 };
 
   /* YYPGOTO[NTERM-NUM].  */
 static const yytype_int8 yypgoto[] =
 {
-     -18,   -18,    20,     2,    10,   -18
+     -19,   -19,    31,   -18,     3,   -19
 };
 
   /* YYDEFGOTO[NTERM-NUM].  */
 static const yytype_int8 yydefgoto[] =
 {
-      -1,     1,     7,     8,     9,    10
+      -1,     1,    12,    13,    14,    15
 };
 
   /* YYTABLE[YYPACT[STATE-NUM]] -- What to do in state STATE-NUM.  If
@@ -518,39 +521,46 @@ static const yytype_int8 yydefgoto[] =
      number is the opposite.  If YYTABLE_NINF, syntax error.  */
 static const yytype_uint8 yytable[] =
 {
-       2,    11,     3,     3,    12,    14,    15,    27,     4,     4,
-      14,    15,    19,    17,    18,    20,    23,    24,     5,     5,
-       6,     6,    21,    16,     0,    13,    22,    25,    26
+       2,    24,    25,     3,    27,    28,    32,    33,    16,     4,
+       5,     6,     7,     8,     9,    17,     3,    31,    18,    10,
+      19,    11,     4,     5,     6,     7,     8,     9,    24,    25,
+      34,    35,    10,    20,    11,    21,    22,    29,    30,     0,
+       0,    23,     0,     0,     0,     0,    26
 };
 
 static const yytype_int8 yycheck[] =
 {
-       0,    18,     3,     3,    19,     4,     5,    20,     9,     9,
-       4,     5,     8,     6,     7,     3,    14,    15,    19,    19,
-      21,    21,     3,    22,    -1,     5,    20,    17,    18
+       0,     4,     5,     3,     6,     7,    24,    25,    18,     9,
+      10,    11,    12,    13,    14,     3,     3,    20,     3,    19,
+       3,    21,     9,    10,    11,    12,    13,    14,     4,     5,
+      27,    28,    19,     3,    21,     3,     3,     8,     3,    -1,
+      -1,    10,    -1,    -1,    -1,    -1,    22
 };
 
   /* YYSTOS[STATE-NUM] -- The (internal number of the) accessing
      symbol of state STATE-NUM.  */
 static const yytype_uint8 yystos[] =
 {
-       0,    24,     0,     3,     9,    19,    21,    25,    26,    27,
-      28,    18,    19,    25,     4,     5,    22,     6,     7,     8,
-       3,     3,    20,    26,    26,    27,    27,    20
+       0,    24,     0,     3,     9,    10,    11,    12,    13,    14,
+      19,    21,    25,    26,    27,    28,    18,     3,     3,     3,
+       3,     3,     3,    25,     4,     5,    22,     6,     7,     8,
+       3,    20,    26,    26,    27,    27
 };
 
   /* YYR1[YYN] -- Symbol number of symbol that rule YYN derives.  */
 static const yytype_uint8 yyr1[] =
 {
        0,    23,    24,    24,    25,    25,    25,    26,    26,    26,
-      27,    27,    27,    28,    28,    28,    28
+      27,    27,    27,    27,    27,    27,    27,    27,    28,    28,
+      28,    28
 };
 
   /* YYR2[YYN] -- Number of symbols on the right hand side of rule YYN.  */
 static const yytype_uint8 yyr2[] =
 {
        0,     2,     0,     3,     1,     3,     3,     1,     3,     3,
-       1,     3,     4,     1,     1,     2,     3
+       1,     3,     2,     2,     2,     2,     2,     2,     1,     1,
+       2,     3
 };
 
 
@@ -1229,53 +1239,83 @@ yyreduce:
         case 3:
 #line 16 "train.y" /* yacc.c:1646  */
     { printf("= %f\n", (float)(yyvsp[-1])); }
-#line 1233 "train.tab.c" /* yacc.c:1646  */
+#line 1243 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 20 "train.y" /* yacc.c:1646  */
     { float aux1 =  (yyvsp[-2]), aux2 = (yyvsp[0]); (yyval) = aux1 + aux2; }
-#line 1239 "train.tab.c" /* yacc.c:1646  */
+#line 1249 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 21 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-2]) - (yyvsp[0]); }
-#line 1245 "train.tab.c" /* yacc.c:1646  */
+#line 1255 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 25 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-2]) * (yyvsp[0]); }
-#line 1251 "train.tab.c" /* yacc.c:1646  */
+#line 1261 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 26 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-2]) / (yyvsp[0]); }
-#line 1257 "train.tab.c" /* yacc.c:1646  */
+#line 1267 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 30 "train.y" /* yacc.c:1646  */
+#line 31 "train.y" /* yacc.c:1646  */
     { (yyval) = pow((yyvsp[-2]), (yyvsp[0])); }
-#line 1263 "train.tab.c" /* yacc.c:1646  */
+#line 1273 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 31 "train.y" /* yacc.c:1646  */
-    { double aux = (yyvsp[-2]); (yyval) = sin(aux); }
-#line 1269 "train.tab.c" /* yacc.c:1646  */
+#line 32 "train.y" /* yacc.c:1646  */
+    { double aux = (yyvsp[0]); (yyval) = sin(aux); }
+#line 1279 "train.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 13:
+#line 33 "train.y" /* yacc.c:1646  */
+    { double aux = (yyvsp[0]); (yyval) = cos(aux); }
+#line 1285 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 35 "train.y" /* yacc.c:1646  */
-    { (yyval) = M_PI; }
-#line 1275 "train.tab.c" /* yacc.c:1646  */
+#line 34 "train.y" /* yacc.c:1646  */
+    { double aux = (yyvsp[0]); (yyval) = tan(aux); }
+#line 1291 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
+#line 35 "train.y" /* yacc.c:1646  */
+    { double aux = (yyvsp[0]); (yyval) = 1/cos(aux); }
+#line 1297 "train.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 16:
 #line 36 "train.y" /* yacc.c:1646  */
+    { double aux = (yyvsp[0]); (yyval) = 1/sin(aux); }
+#line 1303 "train.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 17:
+#line 37 "train.y" /* yacc.c:1646  */
+    { double aux = (yyvsp[0]); (yyval) = 1/tan(aux); }
+#line 1309 "train.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 19:
+#line 41 "train.y" /* yacc.c:1646  */
+    { (yyval) = M_PI; }
+#line 1315 "train.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 20:
+#line 42 "train.y" /* yacc.c:1646  */
     {
   unsigned int factorial(unsigned int n)
  {
@@ -1289,17 +1329,17 @@ yyreduce:
  };
   (yyval) = factorial((yyvsp[-1]));
  }
-#line 1293 "train.tab.c" /* yacc.c:1646  */
+#line 1333 "train.tab.c" /* yacc.c:1646  */
     break;
 
-  case 16:
-#line 49 "train.y" /* yacc.c:1646  */
+  case 21:
+#line 55 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-1]); }
-#line 1299 "train.tab.c" /* yacc.c:1646  */
+#line 1339 "train.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1303 "train.tab.c" /* yacc.c:1646  */
+#line 1343 "train.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1527,7 +1567,7 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 52 "train.y" /* yacc.c:1906  */
+#line 58 "train.y" /* yacc.c:1906  */
 
 
 main(int argc, char **argv)

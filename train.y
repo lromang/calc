@@ -26,9 +26,15 @@ factor: term
 | factor DIV term { $$ = $1 / $3; }
 ;
 
+
 term: digit
 | NUMBER POW NUMBER { $$ = pow($1, $3); }
-| SIN OP NUMBER CP { double aux = $2; $$ = sin(aux); }
+| SIN  NUMBER   { double aux = $2; $$ = sin(aux); }
+| COS  NUMBER   { double aux = $2; $$ = cos(aux); }
+| TAN  NUMBER   { double aux = $2; $$ = tan(aux); }
+| SEC  NUMBER   { double aux = $2; $$ = 1/cos(aux); }
+| CSC  NUMBER   { double aux = $2; $$ = 1/sin(aux); }
+| COT  NUMBER   { double aux = $2; $$ = 1/tan(aux); }
 ;
 
 digit: NUMBER

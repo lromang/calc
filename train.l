@@ -22,7 +22,7 @@
 ")"                {return CP;}
 "^"                {return POW;}
 "pi"               {return PI;}
-[0-9]+             {yylval = atoi(yytext); return NUMBER;}
+[0-9]+(\.?[0-9]*)?             {yylval = atof(yytext); return NUMBER;}
 \n	           {return EOL;}
 [ \t]	           {} 
 %%
