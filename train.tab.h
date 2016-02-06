@@ -39,6 +39,14 @@
 #if YYDEBUG
 extern int yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 2 "train.y" /* yacc.c:1909  */
+
+#define YYSTYPE double
+#include <stdio.h>
+#include <math.h>
+
+#line 50 "train.tab.h" /* yacc.c:1909  */
 
 /* Token type.  */
 #ifndef YYTOKENTYPE

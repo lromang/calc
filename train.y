@@ -1,12 +1,14 @@
-%{
+%code requires
+{
+#define YYSTYPE double
 #include <stdio.h>
 #include <math.h>
-#include <float.h>
-%}
+}
 
 %token NUMBER
 %token ADD SUB MUL DIV FACT SIN COS TAN CSC SEC COT ARCSIN ARCCOS ARCTAN POW OP CP PI
 %token EOL
+
 
 %%
 
@@ -15,13 +17,13 @@ calclist:
 ;
 
 exp: factor
-| exp ADD factor { $$ = $1 + $3; }
+| exp ADD factor { float aux1 =  $1, aux2 = $3; $$ = aux1 + aux2; }
 | exp SUB factor { $$ = $1 - $3; }
 ;
 
 factor: term
 | factor MUL term { $$ = $1 * $3; }
-| factor DIV term { $$ = (float)((float)$1 / (float)$3); }
+| factor DIV term { $$ = $1 / $3; }
 ;
 
 term: digit
@@ -48,6 +50,7 @@ digit: NUMBER
 ;
 
 %%
+
 main(int argc, char **argv)
 {
 	yyparse();

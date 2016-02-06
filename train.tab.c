@@ -62,13 +62,8 @@
 
 
 /* Copy the first part of user declarations.  */
-#line 1 "train.y" /* yacc.c:339  */
 
-#include <stdio.h>
-#include <math.h>
-#include <float.h>
-
-#line 72 "train.tab.c" /* yacc.c:339  */
+#line 67 "train.tab.c" /* yacc.c:339  */
 
 # ifndef YY_NULLPTR
 #  if defined __cplusplus && 201103L <= __cplusplus
@@ -97,6 +92,14 @@
 #if YYDEBUG
 extern int yydebug;
 #endif
+/* "%code requires" blocks.  */
+#line 2 "train.y" /* yacc.c:355  */
+
+#define YYSTYPE double
+#include <stdio.h>
+#include <math.h>
+
+#line 103 "train.tab.c" /* yacc.c:355  */
 
 /* Token type.  */
 #ifndef YYTOKENTYPE
@@ -142,7 +145,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 146 "train.tab.c" /* yacc.c:358  */
+#line 149 "train.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -441,8 +444,8 @@ static const yytype_uint8 yytranslate[] =
   /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    13,    13,    14,    17,    18,    19,    22,    23,    24,
-      27,    28,    29,    32,    33,    34,    47
+       0,    15,    15,    16,    19,    20,    21,    24,    25,    26,
+      29,    30,    31,    34,    35,    36,    49
 };
 #endif
 
@@ -1224,55 +1227,55 @@ yyreduce:
   switch (yyn)
     {
         case 3:
-#line 14 "train.y" /* yacc.c:1646  */
+#line 16 "train.y" /* yacc.c:1646  */
     { printf("= %f\n", (float)(yyvsp[-1])); }
-#line 1230 "train.tab.c" /* yacc.c:1646  */
+#line 1233 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
-#line 18 "train.y" /* yacc.c:1646  */
-    { (yyval) = (yyvsp[-2]) + (yyvsp[0]); }
-#line 1236 "train.tab.c" /* yacc.c:1646  */
+#line 20 "train.y" /* yacc.c:1646  */
+    { float aux1 =  (yyvsp[-2]), aux2 = (yyvsp[0]); (yyval) = aux1 + aux2; }
+#line 1239 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
-#line 19 "train.y" /* yacc.c:1646  */
+#line 21 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-2]) - (yyvsp[0]); }
-#line 1242 "train.tab.c" /* yacc.c:1646  */
+#line 1245 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
-#line 23 "train.y" /* yacc.c:1646  */
+#line 25 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-2]) * (yyvsp[0]); }
-#line 1248 "train.tab.c" /* yacc.c:1646  */
+#line 1251 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
-#line 24 "train.y" /* yacc.c:1646  */
-    { (yyval) = (float)((float)(yyvsp[-2]) / (float)(yyvsp[0])); }
-#line 1254 "train.tab.c" /* yacc.c:1646  */
+#line 26 "train.y" /* yacc.c:1646  */
+    { (yyval) = (yyvsp[-2]) / (yyvsp[0]); }
+#line 1257 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
-#line 28 "train.y" /* yacc.c:1646  */
+#line 30 "train.y" /* yacc.c:1646  */
     { (yyval) = pow((yyvsp[-2]), (yyvsp[0])); }
-#line 1260 "train.tab.c" /* yacc.c:1646  */
+#line 1263 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
-#line 29 "train.y" /* yacc.c:1646  */
+#line 31 "train.y" /* yacc.c:1646  */
     { double aux = (yyvsp[-2]); (yyval) = sin(aux); }
-#line 1266 "train.tab.c" /* yacc.c:1646  */
+#line 1269 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
-#line 33 "train.y" /* yacc.c:1646  */
+#line 35 "train.y" /* yacc.c:1646  */
     { (yyval) = M_PI; }
-#line 1272 "train.tab.c" /* yacc.c:1646  */
+#line 1275 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
-#line 34 "train.y" /* yacc.c:1646  */
+#line 36 "train.y" /* yacc.c:1646  */
     {
   unsigned int factorial(unsigned int n)
  {
@@ -1286,17 +1289,17 @@ yyreduce:
  };
   (yyval) = factorial((yyvsp[-1]));
  }
-#line 1290 "train.tab.c" /* yacc.c:1646  */
+#line 1293 "train.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
-#line 47 "train.y" /* yacc.c:1646  */
+#line 49 "train.y" /* yacc.c:1646  */
     { (yyval) = (yyvsp[-1]); }
-#line 1296 "train.tab.c" /* yacc.c:1646  */
+#line 1299 "train.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1300 "train.tab.c" /* yacc.c:1646  */
+#line 1303 "train.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
@@ -1524,7 +1527,8 @@ yyreturn:
 #endif
   return yyresult;
 }
-#line 50 "train.y" /* yacc.c:1906  */
+#line 52 "train.y" /* yacc.c:1906  */
+
 
 main(int argc, char **argv)
 {

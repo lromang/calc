@@ -699,7 +699,7 @@ YY_DECL
 		}
 
 	{
-#line 5 "train.l"
+#line 6 "train.l"
 
 #line 705 "lex.yy.c"
 
@@ -760,113 +760,113 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 6 "train.l"
+#line 7 "train.l"
 {return ADD;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 7 "train.l"
+#line 8 "train.l"
 {return SUB;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 8 "train.l"
+#line 9 "train.l"
 {return MUL;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 9 "train.l"
+#line 10 "train.l"
 {return DIV;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 10 "train.l"
+#line 11 "train.l"
 {return FACT;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 11 "train.l"
+#line 12 "train.l"
 {return SIN;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 12 "train.l"
+#line 13 "train.l"
 {return COS;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 13 "train.l"
+#line 14 "train.l"
 {return TAN;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 14 "train.l"
+#line 15 "train.l"
 {return CSC;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 15 "train.l"
+#line 16 "train.l"
 {return SEC;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 16 "train.l"
+#line 17 "train.l"
 {return COT;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 17 "train.l"
+#line 18 "train.l"
 {return ARCSIN;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 18 "train.l"
+#line 19 "train.l"
 {return ARCCOS;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 19 "train.l"
+#line 20 "train.l"
 {return ARCTAN;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 20 "train.l"
+#line 21 "train.l"
 {return OP;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 21 "train.l"
+#line 22 "train.l"
 {return CP;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 22 "train.l"
+#line 23 "train.l"
 {return POW;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 23 "train.l"
+#line 24 "train.l"
 {return PI;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 24 "train.l"
+#line 25 "train.l"
 {yylval = atoi(yytext); return NUMBER;}
 	YY_BREAK
 case 20:
 /* rule 20 can match eol */
 YY_RULE_SETUP
-#line 25 "train.l"
+#line 26 "train.l"
 {return EOL;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 26 "train.l"
+#line 27 "train.l"
 {} 
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 27 "train.l"
+#line 28 "train.l"
 ECHO;
 	YY_BREAK
 #line 873 "lex.yy.c"
@@ -1864,7 +1864,10 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 26 "train.l"
+#line 27 "train.l"
+
+
+
 
 
 
